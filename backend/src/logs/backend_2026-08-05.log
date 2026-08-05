@@ -27,3 +27,40 @@
 {"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-05T14:26:09.536Z"}
 {"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-05T14:26:37.012Z"}
 {"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-05T14:26:37.019Z"}
+{"level":"info","message":"Getting error while connection to mongoose MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://www.mongodb.com/docs/atlas/security-whitelist/","service":"workflow-backend","timestamp":"2026-08-05T16:47:43.702Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-05T16:47:43.716Z"}
+{"level":"info","message":"New Create workflow is triggered","service":"workflow-backend","timestamp":"2026-08-05T16:48:17.166Z"}
+{"level":"info","message":"Got Error while creating the workflow ValidationError: workflow_name: Path `workflow_name` is required.","service":"workflow-backend","timestamp":"2026-08-05T16:48:17.182Z"}
+{"level":"info","message":"New Create workflow is triggered","service":"workflow-backend","timestamp":"2026-08-05T16:48:36.772Z"}
+{"level":"info","message":"Got Error while creating the workflow MongooseError: Operation `workflows.insertOne()` buffering timed out after 10000ms","service":"workflow-backend","timestamp":"2026-08-05T16:48:46.788Z"}
+{"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-05T16:51:30.727Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-05T16:51:30.734Z"}
+{"level":"info","message":"New Create workflow is triggered","service":"workflow-backend","timestamp":"2026-08-05T16:51:56.525Z"}
+{"level":"info","message":"WorkFlow created successfully","service":"workflow-backend","timestamp":"2026-08-05T16:51:56.666Z"}
+{"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-05T16:54:02.862Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-05T16:54:02.873Z"}
+{"level":"info","message":"Fetching all workflows is triggered","service":"workflow-backend","timestamp":"2026-08-05T16:54:15.875Z"}
+{"level":"info","message":"All workflows fetched successfully","service":"workflow-backend","timestamp":"2026-08-05T16:54:15.939Z"}
+{"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-05T16:56:25.633Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-05T16:56:25.644Z"}
+{"level":"info","message":"Fetching all workflows is triggered","service":"workflow-backend","timestamp":"2026-08-05T16:56:35.318Z"}
+{"level":"info","message":"All workflows fetched successfully","service":"workflow-backend","timestamp":"2026-08-05T16:56:38.211Z"}
+{"level":"info","message":"Fetching workflow by id is triggered","service":"workflow-backend","timestamp":"2026-08-05T16:56:52.119Z"}
+{"level":"info","message":"Getting error while fetching workflow by id BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer","service":"workflow-backend","timestamp":"2026-08-05T16:56:52.120Z"}
+{"level":"info","message":"Fetching all workflows is triggered","service":"workflow-backend","timestamp":"2026-08-05T16:57:21.747Z"}
+{"level":"info","message":"All workflows fetched successfully","service":"workflow-backend","timestamp":"2026-08-05T16:57:59.685Z"}
+{"level":"info","message":"Fetching all workflows is triggered","service":"workflow-backend","timestamp":"2026-08-05T17:00:16.004Z"}
+{"level":"info","message":"All workflows fetched successfully","service":"workflow-backend","timestamp":"2026-08-05T17:00:16.279Z"}
+{"level":"info","message":"Fetching all workflows is triggered","service":"workflow-backend","timestamp":"2026-08-05T17:01:23.858Z"}
+{"level":"info","message":"All workflows fetched successfully","service":"workflow-backend","timestamp":"2026-08-05T17:01:23.925Z"}
+{"level":"info","message":"Fetching workflow by id is triggered","service":"workflow-backend","timestamp":"2026-08-05T17:02:45.844Z"}
+{"level":"info","message":"WorkFlow fetched successfully","service":"workflow-backend","timestamp":"2026-08-05T17:02:50.154Z"}
+{"level":"info","message":"Fetching workflow by id is triggered","service":"workflow-backend","timestamp":"2026-08-05T17:02:58.959Z"}
+{"level":"info","message":"Getting error while connection to mongoose MongoNetworkError: connection 1 to 159.41.160.95:27017 closed","service":"workflow-backend","timestamp":"2026-08-05T17:04:27.316Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-05T17:04:27.323Z"}
+{"level":"info","message":"Fetching workflow by id is triggered","service":"workflow-backend","timestamp":"2026-08-05T17:04:31.724Z"}
+{"level":"info","message":"Getting error while fetching workflow by id MongooseError: Operation `workflows.findOne()` buffering timed out after 10000ms","service":"workflow-backend","timestamp":"2026-08-05T17:04:41.731Z"}
+{"level":"info","message":"Fetching workflow by id is triggered","service":"workflow-backend","timestamp":"2026-08-05T17:05:13.034Z"}
+{"level":"info","message":"Getting error while fetching workflow by id MongooseError: Operation `workflows.findOne()` buffering timed out after 10000ms","service":"workflow-backend","timestamp":"2026-08-05T17:05:23.038Z"}
+{"level":"info","message":"Fetching all workflows is triggered","service":"workflow-backend","timestamp":"2026-08-05T17:05:38.456Z"}
+{"level":"info","message":"Getting error while fetching all workflows MongooseError: Operation `workflows.find()` buffering timed out after 10000ms","service":"workflow-backend","timestamp":"2026-08-05T17:05:48.464Z"}
