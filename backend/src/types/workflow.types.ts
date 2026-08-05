@@ -16,3 +16,15 @@ export enum NodeType{
     HTTP = "HTTP"
 
 }
+
+export interface INode{
+    id : string;
+    type : NodeType;
+    config : Record<string , any>
+}
+
+export interface IEdge{
+    source : string,
+    target : string,
+    condition? : string
+}

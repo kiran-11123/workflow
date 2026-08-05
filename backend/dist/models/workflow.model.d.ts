@@ -1,15 +1,20 @@
 import mongoose from "mongoose";
-export declare const NodeSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
+import { WorkflowStatus, NodeType } from "../types/workflow.types.js";
+export declare const NodeSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any, any>, {}, {}, {}, {}, {
+    _id: false;
+}, {
     id: string;
-    type?: string | null;
+    type?: NodeType | null;
     config: any;
 }, mongoose.Document<unknown, {}, {
     id: string;
-    type?: string | null;
+    type?: NodeType | null;
     config: any;
-}, {}, mongoose.DefaultSchemaOptions> & {
+}, {}, Omit<mongoose.DefaultSchemaOptions, "_id"> & {
+    _id: false;
+}> & {
     id: string;
-    type?: string | null;
+    type?: NodeType | null;
     config: any;
 } & {
     _id: mongoose.Types.ObjectId;
@@ -17,14 +22,16 @@ export declare const NodeSchema: mongoose.Schema<any, mongoose.Model<any, any, a
     __v: number;
 }, unknown, {
     id: string;
-    type?: string | null;
+    type?: NodeType | null;
     config: any;
 } & {
     _id: mongoose.Types.ObjectId;
 } & {
     __v: number;
 }>;
-export declare const EdgeSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any, any>, {}, {}, {}, {}, mongoose.DefaultSchemaOptions, {
+export declare const EdgeSchema: mongoose.Schema<any, mongoose.Model<any, any, any, any, any, any, any>, {}, {}, {}, {}, {
+    _id: false;
+}, {
     source: string;
     target: string;
     condition?: string | null;
@@ -34,7 +41,9 @@ export declare const EdgeSchema: mongoose.Schema<any, mongoose.Model<any, any, a
     condition?: string | null;
 }, {
     id: string;
-}, mongoose.DefaultSchemaOptions> & Omit<{
+}, Omit<mongoose.DefaultSchemaOptions, "_id"> & {
+    _id: false;
+}> & Omit<{
     source: string;
     target: string;
     condition?: string | null;
@@ -57,18 +66,18 @@ declare const workflow_model: mongoose.Model<{
     workflow_name: string;
     description?: string | null;
     version: number;
-    status: string;
+    status: WorkflowStatus;
     nodes: mongoose.Types.DocumentArray<{
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, mongoose.Types.Subdocument<mongoose.mongo.ObjectId, unknown, {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, {}, {}> & {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }>;
     edges: mongoose.Types.DocumentArray<{
@@ -90,18 +99,18 @@ declare const workflow_model: mongoose.Model<{
     workflow_name: string;
     description?: string | null;
     version: number;
-    status: string;
+    status: WorkflowStatus;
     nodes: mongoose.Types.DocumentArray<{
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, mongoose.Types.Subdocument<mongoose.mongo.ObjectId, unknown, {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, {}, {}> & {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }>;
     edges: mongoose.Types.DocumentArray<{
@@ -125,18 +134,18 @@ declare const workflow_model: mongoose.Model<{
     workflow_name: string;
     description?: string | null;
     version: number;
-    status: string;
+    status: WorkflowStatus;
     nodes: mongoose.Types.DocumentArray<{
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, mongoose.Types.Subdocument<mongoose.mongo.ObjectId, unknown, {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, {}, {}> & {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }>;
     edges: mongoose.Types.DocumentArray<{
@@ -164,18 +173,18 @@ declare const workflow_model: mongoose.Model<{
     workflow_name: string;
     description?: string | null;
     version: number;
-    status: string;
+    status: WorkflowStatus;
     nodes: mongoose.Types.DocumentArray<{
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, mongoose.Types.Subdocument<mongoose.mongo.ObjectId, unknown, {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, {}, {}> & {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }>;
     edges: mongoose.Types.DocumentArray<{
@@ -195,18 +204,18 @@ declare const workflow_model: mongoose.Model<{
     workflow_name: string;
     description?: string | null;
     version: number;
-    status: string;
+    status: WorkflowStatus;
     nodes: mongoose.Types.DocumentArray<{
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, mongoose.Types.Subdocument<mongoose.mongo.ObjectId, unknown, {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, {}, {}> & {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }>;
     edges: mongoose.Types.DocumentArray<{
@@ -230,18 +239,18 @@ declare const workflow_model: mongoose.Model<{
     workflow_name: string;
     description?: string | null;
     version: number;
-    status: string;
+    status: WorkflowStatus;
     nodes: mongoose.Types.DocumentArray<{
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, mongoose.Types.Subdocument<mongoose.mongo.ObjectId, unknown, {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, {}, {}> & {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }>;
     edges: mongoose.Types.DocumentArray<{
@@ -269,18 +278,18 @@ declare const workflow_model: mongoose.Model<{
     workflow_name: string;
     description?: string | null;
     version: number;
-    status: string;
+    status: WorkflowStatus;
     nodes: mongoose.Types.DocumentArray<{
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, mongoose.Types.Subdocument<mongoose.mongo.ObjectId, unknown, {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, {}, {}> & {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }>;
     edges: mongoose.Types.DocumentArray<{
@@ -306,18 +315,18 @@ declare const workflow_model: mongoose.Model<{
     workflow_name: string;
     description?: string | null;
     version: number;
-    status: string;
+    status: WorkflowStatus;
     nodes: mongoose.Types.DocumentArray<{
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, mongoose.Types.Subdocument<mongoose.mongo.ObjectId, unknown, {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }, {}, {}> & {
         id: string;
-        type?: string | null;
+        type?: NodeType | null;
         config: any;
     }>;
     edges: mongoose.Types.DocumentArray<{
