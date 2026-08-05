@@ -1,1 +1,25 @@
 {"level":"info","message":"WorkFlow Server is running on PORT undefined","service":"workflow-backend","timestamp":"2026-08-05T14:02:19.609Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT undefined","service":"workflow-backend","timestamp":"2026-08-05T14:16:54.056Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT undefined","service":"workflow-backend","timestamp":"2026-08-05T14:16:56.153Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT undefined","service":"workflow-backend","timestamp":"2026-08-05T14:16:57.218Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT undefined","service":"workflow-backend","timestamp":"2026-08-05T14:17:23.133Z"}
+{"level":"info","message":"Getting error while connection to mongoose MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","service":"workflow-backend","timestamp":"2026-08-05T14:17:33.659Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT undefined","service":"workflow-backend","timestamp":"2026-08-05T14:17:33.665Z"}
+{"level":"info","message":"Getting error while connection to mongoose MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","service":"workflow-backend","timestamp":"2026-08-05T14:18:13.508Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT undefined","service":"workflow-backend","timestamp":"2026-08-05T14:18:13.513Z"}
+{"level":"info","message":"Getting error while connection to mongoose MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","service":"workflow-backend","timestamp":"2026-08-05T14:18:19.709Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT undefined","service":"workflow-backend","timestamp":"2026-08-05T14:18:19.714Z"}
+{"level":"info","message":"Getting error while connection to mongoose MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","service":"workflow-backend","timestamp":"2026-08-05T14:18:39.765Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT undefined","service":"workflow-backend","timestamp":"2026-08-05T14:18:39.774Z"}
+{"level":"info","message":"Getting error while connection to mongoose MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","service":"workflow-backend","timestamp":"2026-08-05T14:18:41.588Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT undefined","service":"workflow-backend","timestamp":"2026-08-05T14:18:41.593Z"}
+{"level":"info","message":"Getting error while connection to mongoose ReferenceError: MONGO_URL is not defined","service":"workflow-backend","timestamp":"2026-08-05T14:19:43.746Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT undefined","service":"workflow-backend","timestamp":"2026-08-05T14:19:43.755Z"}
+{"level":"info","message":"Getting error while connection to mongoose MongooseError: The `uri` parameter to `openUri()` must be a string, got \"object\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","service":"workflow-backend","timestamp":"2026-08-05T14:19:53.860Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT undefined","service":"workflow-backend","timestamp":"2026-08-05T14:19:53.871Z"}
+{"level":"info","message":"Getting error while connection to mongoose MongooseError: The `uri` parameter to `openUri()` must be a string, got \"undefined\". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.","service":"workflow-backend","timestamp":"2026-08-05T14:20:03.763Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT undefined","service":"workflow-backend","timestamp":"2026-08-05T14:20:03.769Z"}
+{"level":"info","message":"Getting error while connection to mongoose Error: MONGO_URL is not defined in environment variables","service":"workflow-backend","timestamp":"2026-08-05T14:20:09.170Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT undefined","service":"workflow-backend","timestamp":"2026-08-05T14:20:09.174Z"}
+{"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-05T14:22:56.813Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-05T14:22:56.819Z"}

@@ -2,15 +2,15 @@ import express from "express";
 import cors from 'cors'
 import dotenv from 'dotenv'
 import logger from "./utils/logger.setup.js";
-import { log } from "node:console";
 dotenv.config()
 const PORT = process.env.PORT;
+import ConnectDB from "./config/mongoose.connection.js";
 
 
 const app = express()
 app.use(cors())
 app.use(express.json())
-
+await ConnectDB();
 
 app.get("/health" , (req,res)=>{
      logger.info(`Workflow Backend Server is healthy`)
