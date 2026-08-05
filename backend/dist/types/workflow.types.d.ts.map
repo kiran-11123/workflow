@@ -1,0 +1,1 @@
+{"version":3,"file":"workflow.types.d.ts","sourceRoot":"","sources":["../../src/types/workflow.types.ts"],"names":[],"mappings":"AACA,oBAAY,cAAc;IAEtB,KAAK,UAAU;IACf,MAAM,WAAY;IAClB,QAAQ,aAAa;CACxB;AAED,oBAAY,QAAQ;IAEhB,KAAK,UAAU;IACf,KAAK,UAAU;IACf,GAAG,QAAQ;IACX,KAAK,UAAU;IACf,QAAQ,aAAa;IACrB,IAAI,SAAS;CAEhB"}
