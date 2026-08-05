@@ -64,3 +64,5 @@
 {"level":"info","message":"Getting error while fetching workflow by id MongooseError: Operation `workflows.findOne()` buffering timed out after 10000ms","service":"workflow-backend","timestamp":"2026-08-05T17:05:23.038Z"}
 {"level":"info","message":"Fetching all workflows is triggered","service":"workflow-backend","timestamp":"2026-08-05T17:05:38.456Z"}
 {"level":"info","message":"Getting error while fetching all workflows MongooseError: Operation `workflows.find()` buffering timed out after 10000ms","service":"workflow-backend","timestamp":"2026-08-05T17:05:48.464Z"}
+{"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-05T17:07:10.779Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-05T17:07:10.793Z"}

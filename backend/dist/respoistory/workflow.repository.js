@@ -5,7 +5,7 @@ export class WorkFlowRespository {
         await workflow_model.create(data);
     }
     async findAll() {
-        await workflow_model.find();
+        return await workflow_model.find();
     }
     async findById(id) {
         const new_id = new mongoose.Types.ObjectId(id);
