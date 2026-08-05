@@ -40,7 +40,7 @@ export class WorkFlowController{
          }
     }
 
-    async findAll(req : Response , res : Response){
+async findAll(req : Request , res : Response){
          
         try{
             logger.info(`Fetching all workflows is triggered`)
