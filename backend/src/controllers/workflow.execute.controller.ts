@@ -12,7 +12,7 @@ export class WorkFlowExecutorController{
         logger.info(`Entered into the workflow execution controller`)
         try{
 
-            const id : any = req.params.id;
+            const id = Array.isArray(req.params.id) ? req.params.id[0] : req.params.id;
             
             if(!id){
                 logger.info(`Workflow id not found`)
@@ -25,7 +25,8 @@ export class WorkFlowExecutorController{
             
             logger.info(`Workflow with ${id} executed successfully `)
             return res.status(200).json({
-                message : 'Workflow executed successfully'
+                message : 'Workflow executed successfully',
+                data : result
             })
 
         }

@@ -1,2 +1,6 @@
 {"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-10T13:37:35.407Z"}
 {"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-10T13:37:35.450Z"}
+{"level":"info","message":"Fetching all workflows is triggered","service":"workflow-backend","timestamp":"2026-08-10T13:38:58.772Z"}
+{"level":"info","message":"All workflows fetched successfully","service":"workflow-backend","timestamp":"2026-08-10T13:38:58.829Z"}
+{"level":"info","message":"Fetching all workflows is triggered","service":"workflow-backend","timestamp":"2026-08-10T13:40:12.715Z"}
+{"level":"info","message":"All workflows fetched successfully","service":"workflow-backend","timestamp":"2026-08-10T13:40:12.990Z"}

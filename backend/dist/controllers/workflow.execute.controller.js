@@ -5,7 +5,7 @@ export class WorkFlowExecutorController {
     async execute(req, res) {
         logger.info(`Entered into the workflow execution controller`);
         try {
-            const id = req.params.id;
+            const id = Array.isArray(req.params.id) ? req.params.id[0] : req.params.id;
             if (!id) {
                 logger.info(`Workflow id not found`);
                 return res.status(400).json({
@@ -15,7 +15,8 @@ export class WorkFlowExecutorController {
             const result = await execute_workflow.execute(id);
             logger.info(`Workflow with ${id} executed successfully `);
             return res.status(200).json({
-                message: 'Workflow executed successfully'
+                message: 'Workflow executed successfully',
+                data: result
             });
         }
         catch (er) {
