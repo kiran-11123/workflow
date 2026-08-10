@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import { WorkflowStatus, NodeType } from "../types/workflow.types.js";
 export const NodeSchema = new mongoose.Schema({
     id: { type: String, required: true },
-    type: { type: String, enum: Object.values(NodeType), requied: true },
+    type: { type: String, enum: Object.values(NodeType), required: true },
     config: {
         type: Object,
         default: {}

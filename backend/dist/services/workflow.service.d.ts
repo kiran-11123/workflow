@@ -8,15 +8,15 @@ export declare class WorkFlowService {
         status: import("../types/workflow.types.js").WorkflowStatus;
         nodes: import("mongoose").Types.DocumentArray<{
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }, import("mongoose").Types.Subdocument<import("mongodb").ObjectId, unknown, {
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }, {}, {}> & {
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }>;
         edges: import("mongoose").Types.DocumentArray<{
@@ -43,15 +43,15 @@ export declare class WorkFlowService {
         status: import("../types/workflow.types.js").WorkflowStatus;
         nodes: import("mongoose").Types.DocumentArray<{
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }, import("mongoose").Types.Subdocument<import("mongodb").ObjectId, unknown, {
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }, {}, {}> & {
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }>;
         edges: import("mongoose").Types.DocumentArray<{
@@ -81,15 +81,15 @@ export declare class WorkFlowService {
         status: import("../types/workflow.types.js").WorkflowStatus;
         nodes: import("mongoose").Types.DocumentArray<{
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }, import("mongoose").Types.Subdocument<import("mongodb").ObjectId, unknown, {
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }, {}, {}> & {
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }>;
         edges: import("mongoose").Types.DocumentArray<{
@@ -116,15 +116,15 @@ export declare class WorkFlowService {
         status: import("../types/workflow.types.js").WorkflowStatus;
         nodes: import("mongoose").Types.DocumentArray<{
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }, import("mongoose").Types.Subdocument<import("mongodb").ObjectId, unknown, {
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }, {}, {}> & {
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }>;
         edges: import("mongoose").Types.DocumentArray<{
@@ -154,15 +154,15 @@ export declare class WorkFlowService {
         status: import("../types/workflow.types.js").WorkflowStatus;
         nodes: import("mongoose").Types.DocumentArray<{
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }, import("mongoose").Types.Subdocument<import("mongodb").ObjectId, unknown, {
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }, {}, {}> & {
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }>;
         edges: import("mongoose").Types.DocumentArray<{
@@ -189,15 +189,15 @@ export declare class WorkFlowService {
         status: import("../types/workflow.types.js").WorkflowStatus;
         nodes: import("mongoose").Types.DocumentArray<{
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }, import("mongoose").Types.Subdocument<import("mongodb").ObjectId, unknown, {
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }, {}, {}> & {
             id: string;
-            type?: import("../types/workflow.types.js").NodeType | null;
+            type: import("../types/workflow.types.js").NodeType;
             config: any;
         }>;
         edges: import("mongoose").Types.DocumentArray<{
