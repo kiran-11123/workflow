@@ -47,5 +47,43 @@ export class AuthController {
             });
         }
     }
+    async SignupController(req, res) {
+        logger.info('Sign up request received', { email: req.body.email, username: req.body.username });
+        try {
+            const email = req.body.email;
+            const username = req.body.username;
+            const password = req.body.password;
+            if (!email || !username || !password) {
+                logger.warn('Sign up failed: missing required fields');
+                return res.status(400).json({
+                    message: 'All Fields Required'
+                });
+            }
+            const token = await auth_service.SignUpService(email, username, password);
+            logger.info('User registered successfully', { email, username });
+            return res.status(201).json({
+                message: 'User Registered Successfully',
+                token: token
+            });
+        }
+        catch (er) {
+            if (er.message === 'User Already Registered') {
+                logger.warn('Sign up failed: user already registered', { email: req.body.email });
+                return res.status(400).json({
+                    message: 'User Already Registered'
+                });
+            }
+            else if (er.message === 'Username Already Taken') {
+                logger.warn('Sign up failed: username already taken', { username: req.body.username });
+                return res.status(400).json({
+                    message: 'Username Already Taken'
+                });
+            }
+            logger.error('Sign up error', { error: er.message, stack: er.stack });
+            return res.status(500).json({
+                message: 'Internal Server Error'
+            });
+        }
+    }
 }
 //# sourceMappingURL=user.auth.controller.js.map

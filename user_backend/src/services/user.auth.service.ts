@@ -47,4 +47,43 @@ export class AuthService{
         }
          
     }
+
+    async SignUpService(email : string , username :string , password : string){
+         try {
+        logger.info('Registering new user', { email, username });
+        const existing_user = await user_model.findOne({
+            $or: [
+                { email },
+                { username }
+            ]
+        });
+
+        if (existing_user) {
+            if (existing_user.email === email) {
+                logger.warn('Sign up failed: user already registered', { email });
+                throw new Error("User Already Registered");
+            }
+
+            if (existing_user.username === username) {
+                logger.warn('Sign up failed: username already taken', { username });
+                throw new Error("Username Already Taken");
+            }
+        }
+
+        const hash_password = await bcrypt.hash(password, 10);
+        const new_user = new user_model({
+            email,
+            username,
+            password: hash_password
+        });
+
+        await new_user.save();
+        logger.info('User registered successfully', { email, username });
+        return true;
+    } catch (er) {
+        logger.error('Error during sign up', { error: er });
+        throw er;
+
+    }
+    }
 }

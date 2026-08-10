@@ -7,6 +7,7 @@ import RunLogRetentionJob from './utils/log.retention.js';
 import logger from './utils/logger.setup.js';
 import cookieParser from 'cookie-parser';
 import rateLimit from 'express-rate-limit';
+import auth_router from './routes/user.auth.routes.js';
 const PORT = process.env.PORT;
 const app = express();
 app.use(cors());
@@ -22,6 +23,7 @@ const Limiter = rateLimit({
     }
 });
 app.use(Limiter);
+app.use('/api/auth', auth_router);
 app.listen(PORT, () => {
     logger.info(`Users backend server is running in PORT ${PORT}`);
 });
