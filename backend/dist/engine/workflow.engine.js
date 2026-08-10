@@ -17,7 +17,7 @@ export class ExecuteEngine {
             while (true) {
                 logger.info(`Executing node ${CurrentNode.id} of type ${CurrentNode.type}`);
                 const result = await this.executeNode(CurrentNode);
-                logger.info(`workflow of type ${CurrentNode} executed successfulyl`);
+                logger.info(`workflow of type ${CurrentNode} executed successfully`);
                 if (CurrentNode.type === "END")
                     break;
                 const NextEdge = edges.find(edge => edge.source === CurrentNode.id);
