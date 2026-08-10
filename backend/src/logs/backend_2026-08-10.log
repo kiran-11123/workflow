@@ -12,3 +12,21 @@
 {"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-10T16:17:35.870Z"}
 {"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-10T16:19:06.135Z"}
 {"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-10T16:19:06.183Z"}
+{"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-10T16:19:10.881Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-10T16:19:10.921Z"}
+{"level":"info","message":"Entered into the workflow execution controller","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.588Z"}
+{"level":"info","message":"Entered into workflow execution service for id 6a736a2c0a4f84dd8e8c8016","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.589Z"}
+{"level":"info","message":"Workflow engine started for workflow Signup Flow","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.653Z"}
+{"level":"info","message":"Starting workflow from node 1","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.654Z"}
+{"level":"info","message":"Executing node 1 of type START","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.654Z"}
+{"level":"info","message":"Start node executed","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.655Z"}
+{"level":"info","message":"workflow of type { id: '1', type: 'START' } executed successfully","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.656Z"}
+{"level":"info","message":"Executing node 2 of type EMAIL","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.656Z"}
+{"level":"info","message":"Email node started","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.657Z"}
+{"level":"info","message":"Email node executed successfully","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.657Z"}
+{"level":"info","message":"workflow of type { id: '2', type: 'EMAIL' } executed successfully","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.658Z"}
+{"level":"info","message":"Executing node 3 of type END","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.658Z"}
+{"level":"info","message":"End node executed","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.659Z"}
+{"level":"info","message":"workflow of type { id: '3', type: 'END' } executed successfully","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.659Z"}
+{"level":"info","message":"Workflow Signup Flow reached END node","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.659Z"}
+{"level":"info","message":"Workflow with 6a736a2c0a4f84dd8e8c8016 executed successfully ","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.660Z"}
