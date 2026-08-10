@@ -7,3 +7,5 @@
 {"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-10T16:53:36.559Z"}
 {"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-10T16:53:57.321Z"}
 {"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-10T16:53:57.355Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-10T17:03:12.024Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-10T17:03:12.056Z"}
