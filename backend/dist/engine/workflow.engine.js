@@ -1,5 +1,7 @@
 import logger from "../utils/logger.setup.js";
-import { WorkflowStatus } from "../types/workflow.types.js";
+import { WorkflowStatus, NodeType } from "../types/workflow.types.js";
+import { EmailHandler } from "../handlers/email.handler.js";
+const email_handler = new EmailHandler();
 export class ExecuteEngine {
     async execute(workflow) {
         logger.info(`Workflow engine started for workflow ${workflow.workflow_name}`);
@@ -12,8 +14,12 @@ export class ExecuteEngine {
             }
             logger.info(`Starting workflow from node ${startNode.id}`);
             let CurrentNode = startNode;
-            while (CurrentNode.type !== "END") {
+            while (true) {
                 logger.info(`Executing node ${CurrentNode.id} of type ${CurrentNode.type}`);
+                const result = await this.executeNode(CurrentNode);
+                logger.info(`workflow of type ${CurrentNode} executed successfulyl`);
+                if (CurrentNode.type === "END")
+                    break;
                 const NextEdge = edges.find(edge => edge.source === CurrentNode.id);
                 if (!NextEdge) {
                     throw new Error(`No outgoing edge found for node ${CurrentNode.id}`);
@@ -32,6 +38,23 @@ export class ExecuteEngine {
         catch (er) {
             logger.info(`Error while executing the workflow ${er}`);
             throw er;
+        }
+    }
+    async executeNode(node) {
+        switch (node.type) {
+            case NodeType.START:
+                logger.info(`Start node executed`);
+                break;
+            case NodeType.EMAIL:
+                logger.info(`Email node started`);
+                const result = await email_handler.sendEmail(node.config);
+                if (result == true) {
+                    logger.info(`Email node executed successfully`);
+                }
+                break;
+            case NodeType.END:
+                logger.info(`End node executed`);
+                break;
         }
     }
 }
