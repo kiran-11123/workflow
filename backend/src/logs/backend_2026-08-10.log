@@ -30,3 +30,5 @@
 {"level":"info","message":"workflow of type { id: '3', type: 'END' } executed successfully","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.659Z"}
 {"level":"info","message":"Workflow Signup Flow reached END node","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.659Z"}
 {"level":"info","message":"Workflow with 6a736a2c0a4f84dd8e8c8016 executed successfully ","service":"workflow-backend","timestamp":"2026-08-10T16:20:16.660Z"}
+{"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-10T16:24:43.023Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-10T16:24:43.120Z"}
