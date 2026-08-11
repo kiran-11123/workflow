@@ -1,10 +1,9 @@
-import { ExecuteEngine } from "../engine/workflow.engine.js";
+import { SingupExecuteEngine } from "../engine/workflow.engine.js";
 import workflow_model from "../models/workflow.model.js";
 import logger from "../utils/logger.setup.js";
 import { WorkFlowRespository } from "../respoistory/workflow.repository.js";
 import workflow_status from "../models/workflow.status.js";
-import { error } from "node:console";
-const engine = new ExecuteEngine();
+const engine = new SingupExecuteEngine();
 const workflow_repository  = new WorkFlowRespository()
 
 
@@ -40,20 +39,47 @@ export class ExecuteSingupWorkFlow implements AllWorkFlows{
 
                   const new_status = new workflow_status({
                          email : email,
-                         idempotent_key  :idempotent_key
+                         idempotent_key  :idempotent_key,
+                         status :'RUNNING'
                   })
 
                   await new_status.save();
-                  const result = await engine.execute(workflow);
+
+                  try{
+
+                  
+                  const result = await engine.SingupFlowEngine(workflow , email);
                   if(result){
                          new_status.status = 'Completed'
                   }
 
+                  await new_status.save();
+
                   return JSON.stringify(result);
+
+            }
+            catch(er){
+
+                  new_status.status ='FAILED'
+
+                  await new_status.save()
+
+                  logger.error(
+                    `Signup workflow failed for ${email}: ${er}`
+                );
+
+                throw er;
+
+            }
+
+                  
 
 
             }
             catch(er){
+                  logger.error(
+                `Error executing signup workflow: ${er}`
+            );
                   throw er;
             }
            

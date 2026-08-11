@@ -3,9 +3,13 @@ import { type INode , type IEdge, WorkflowStatus, NodeType } from "../types/work
 import { EmailHandler } from "../handlers/email.handler.js";
 
 const email_handler = new EmailHandler();
-export class ExecuteEngine{
+
+interface AllExecuteEngines{
+     SingupFlowEngine(workflow :any , email : string) : Promise<boolean>
+}
+export class SingupExecuteEngine implements AllExecuteEngines{
        
-     async execute(workflow : any){
+     async SingupFlowEngine(workflow : any , email : string):Promise<boolean>{
         logger.info(`Workflow engine started for workflow ${workflow.workflow_name}`)
         try{
            
@@ -13,7 +17,7 @@ export class ExecuteEngine{
             const edges : IEdge[] = workflow.edges;
 
             const startNode = nodes.find(
-                node=>node.type==='START'
+                node=>node.type==NodeType.START
             )
 
               if (!startNode) {
@@ -30,8 +34,9 @@ export class ExecuteEngine{
             while(true){
 
                 logger.info(`Executing node ${CurrentNode.id} of type ${CurrentNode.type}`)
+                
 
-                const result = await this.executeNode(CurrentNode)
+                const result = await this.executeNode(CurrentNode , email)
 
                 logger.info(`workflow of type ${CurrentNode} executed successfully`)
 
@@ -65,9 +70,7 @@ export class ExecuteEngine{
                 `Workflow ${workflow.workflow_name} reached END node`
             );
 
-            return {
-                status: "COMPLETED"
-            };
+            return true
 
               
 
@@ -79,7 +82,7 @@ export class ExecuteEngine{
           
      }
 
-     private async executeNode(node : INode){
+     private async executeNode(node : INode , email :string){
            
         switch(node.type){
               
@@ -88,11 +91,24 @@ export class ExecuteEngine{
                 break;
             case NodeType.EMAIL:
                 logger.info(`Email node started`)
-                const result :any =await email_handler.sendEmail(node.config);
-                if(result==true){
-                    logger.info(`Email node executed successfully`)
+                try{
+                const result :any =await email_handler.sendEmail(email);
+                     if(result==true){
+                        logger.info(`Email node executed successfully`)
+                     }
+
+                   return result;
+
+                 }
+
+                catch(er){
+                     logger.info(`Error in the signup workflow for email ${email} : ${er}`)
+                     throw er;
                 }
-                break;
+                finally{
+                   break;
+                }
+            
 
             case NodeType.END:
                 logger.info(`End node executed`)
