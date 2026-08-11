@@ -1,5 +1,6 @@
 import type { Request, Response } from "express";
 export declare class WorkFlowExecutorController {
-    execute(req: Request, res: Response): Promise<Response<any, Record<string, any>>>;
+    signup_workflow_execute(req: Request, res: Response): Promise<Response<any, Record<string, any>> | undefined>;
+    execute(req: Request, res: Response): Promise<Response<any, Record<string, any>> | undefined>;
 }
 //# sourceMappingURL=workflow.execute.controller.d.ts.map

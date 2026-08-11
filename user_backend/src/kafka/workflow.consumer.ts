@@ -22,17 +22,22 @@ export async function ConnectConsumer(){
             const data = JSON.parse(message.value?.toString() || "{}")
             
             const email = data.email;
+            const to = data.to;
             const idempotent_key   = data.idempotent_key
+
+            if(!email || !to || !idempotent_key){
+                throw new Error(`Data is missing in workflow topic`)
+            }
 
             let retries = 0;
 
             while(retries < 3){
                   
                 try{
-                const response = await axios.post('http://localhost:5000/api/workflow/execute/signup' , {
+                const response = await axios.post(`http://localhost:5000/api/workflow/execute/signup` , {
                     idempotent_key  :idempotent_key,
                     email :email,
-                    workflow_name : "Signup Flow"
+                    workflow_name : to
                 } )
 
                 if(response.status === 200){

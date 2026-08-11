@@ -15,6 +15,9 @@ export class WorkFlowRespository {
         const new_id = new mongoose.Types.ObjectId(id);
         return await workflow_model.findByIdAndUpdate(new_id, data, { new: true });
     }
+    async findByWorkFlowName(name) {
+        return await workflow_model.find({ workflow_name: name });
+    }
     async delete(id) {
         await workflow_model.findByIdAndDelete(id);
     }
