@@ -1,0 +1,52 @@
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-11T12:35:34.409Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-11T12:35:35.718Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-11T12:35:36.176Z"}
+{"level":"info","message":"Kafka Workflow producer is connected","service":"user-backend","timestamp":"2026-08-11T12:35:37.141Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-11T12:35:37.267Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-11T12:36:27.381Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-11T12:36:28.372Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-11T12:36:28.502Z"}
+{"level":"info","message":"Kafka Workflow producer is connected","service":"user-backend","timestamp":"2026-08-11T12:36:31.656Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-11T12:36:31.758Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-11T12:37:47.167Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-11T12:37:48.212Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-11T12:37:48.341Z"}
+{"level":"info","message":"Kafka Workflow producer is connected","service":"user-backend","timestamp":"2026-08-11T12:37:48.680Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-11T12:37:48.718Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-11T12:38:38.200Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-11T12:38:48.395Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-11T12:38:49.117Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-11T12:38:49.173Z"}
+{"level":"info","message":"Kafka Workflow producer is connected","service":"user-backend","timestamp":"2026-08-11T12:38:49.399Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-11T12:38:49.456Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-11T12:39:32.058Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-11T12:39:32.806Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-11T12:39:33.024Z"}
+{"level":"info","message":"Kafka Workflow producer is connected","service":"user-backend","timestamp":"2026-08-11T12:39:33.581Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-11T12:39:33.713Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-11T12:40:05.078Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-11T12:40:06.052Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-11T12:40:06.821Z"}
+{"level":"info","message":"Kafka Workflow producer is connected","service":"user-backend","timestamp":"2026-08-11T12:40:14.212Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-11T12:40:14.388Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-11T12:40:32.579Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-11T12:40:35.113Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-11T12:40:35.827Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-11T12:40:56.837Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-11T12:40:57.397Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-11T12:40:57.417Z"}
+{"level":"info","message":"Kafka Workflow producer is connected","service":"user-backend","timestamp":"2026-08-11T12:41:14.248Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-11T12:41:14.353Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-11T12:43:47.104Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-11T12:43:47.986Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-11T12:43:48.205Z"}
+{"level":"info","message":"Kafka Workflow producer is connected","service":"user-backend","timestamp":"2026-08-11T12:43:48.742Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-11T12:43:48.783Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-11T12:44:06.543Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-11T12:44:07.380Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-11T12:44:07.438Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-11T12:45:22.860Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-11T12:45:24.027Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-11T12:45:24.183Z"}
+{"level":"info","message":"Kafka Workflow producer is connected","service":"user-backend","timestamp":"2026-08-11T12:45:24.729Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-11T12:45:24.790Z"}

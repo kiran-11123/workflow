@@ -12,7 +12,7 @@ export class AuthController {
                     message: 'Required Email and Password'
                 });
             }
-            const token = await auth_service.SiginService(email, password);
+            const token = await auth_service.signinService(email, password);
             res.cookie('token', token, {
                 httpOnly: true,
                 secure: true,
@@ -59,7 +59,7 @@ export class AuthController {
                     message: 'All Fields Required'
                 });
             }
-            const token = await auth_service.SignUpService(email, username, password);
+            const token = await auth_service.signupService(email, username, password);
             logger.info('User registered successfully', { email, username });
             return res.status(201).json({
                 message: 'User Registered Successfully',

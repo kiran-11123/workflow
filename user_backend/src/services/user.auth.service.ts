@@ -2,12 +2,19 @@ import user_model from "../models/user.model.js";
 import bcrypt from "bcryptjs";
 import logger from "../utils/logger.setup.js";
 import jwt from 'jsonwebtoken'
+import workflow_producer from "../kafka/workflow.producer.js";
+import crypto from 'crypto'
+
+interface Authentication {
+    signinService(email : string , password : string): Promise<string>;
+    signupService(email : string , username : string , password : string): Promise<boolean>;
+}
 
 
+export class AuthService implements Authentication{
 
-export class AuthService{
-        
-    async SiginService(email : string , password : string){
+   
+    async signinService(email : string , password : string){
 
         try{
 
@@ -48,7 +55,9 @@ export class AuthService{
          
     }
 
-    async SignUpService(email : string , username :string , password : string){
+
+
+    async signupService(email : string , username :string , password : string){
          try {
         logger.info('Registering new user', { email, username });
         const existing_user = await user_model.findOne({
@@ -76,6 +85,22 @@ export class AuthService{
             username,
             password: hash_password
         });
+
+        const idempotent_key = crypto.randomUUIDv7();
+
+        await workflow_producer.send({
+            topic : 'workflow-topic',
+            messages :[
+                {
+                     key : idempotent_key,
+                     value : JSON.stringify({
+                        email : email,
+                        to : 'Signup Flow',
+                        idempotent_key : idempotent_key
+                     })
+                }
+            ]
+        })
 
         await new_user.save();
         logger.info('User registered successfully', { email, username });

@@ -20,7 +20,7 @@ export class AuthController{
                  })
             }
 
-            const token  = await auth_service.SiginService(email , password);
+            const token  = await auth_service.signinService(email , password);
 
                 res.cookie('token', token, {
             httpOnly: true,
@@ -65,7 +65,7 @@ export class AuthController{
     }
 
     async SignupController(req :Request , res : Response){
-             logger.info('Sign up request received', { email: req.body.email, username: req.body.username });
+        logger.info('Sign up request received', { email: req.body.email, username: req.body.username });
 
     try {
         const email = req.body.email;
@@ -79,7 +79,7 @@ export class AuthController{
             });
         }
 
-        const token = await auth_service.SignUpService(email, username, password);
+        const token = await auth_service.signupService(email, username, password);
         logger.info('User registered successfully', { email, username });
 
         return res.status(201).json({

@@ -11,3 +11,26 @@
 {"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-10T17:03:12.056Z"}
 {"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-10T17:04:57.583Z"}
 {"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-10T17:04:57.632Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-10T17:19:46.227Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-10T17:19:46.263Z"}
+{"level":"info","message":"Entered into the SigninController","service":"user-backend","timestamp":"2026-08-10T17:20:56.971Z"}
+{"level":"info","message":"User with email kiran.sadara6730@gmail.com does not have account","service":"user-backend","timestamp":"2026-08-10T17:20:57.012Z"}
+{"level":"info","message":"Error while signing in , Error: The user not registered","service":"user-backend","timestamp":"2026-08-10T17:20:57.013Z"}
+{"level":"info","message":"Error while user signin Error: The user not registered","service":"user-backend","timestamp":"2026-08-10T17:20:57.013Z"}
+{"email":"kiran.sadara6730@gmail.com","level":"info","message":"Sign up request received","service":"user-backend","timestamp":"2026-08-10T17:21:19.806Z","username":"kiran_24"}
+{"email":"kiran.sadara6730@gmail.com","level":"info","message":"Registering new user","service":"user-backend","timestamp":"2026-08-10T17:21:19.807Z","username":"kiran_24"}
+{"email":"kiran.sadara6730@gmail.com","level":"info","message":"User registered successfully","service":"user-backend","timestamp":"2026-08-10T17:21:20.023Z","username":"kiran_24"}
+{"email":"kiran.sadara6730@gmail.com","level":"info","message":"User registered successfully","service":"user-backend","timestamp":"2026-08-10T17:21:20.024Z","username":"kiran_24"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-10T17:50:03.036Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-10T17:50:04.802Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-10T17:50:04.894Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-10T17:50:46.027Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-10T17:50:46.668Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-10T17:55:25.588Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-10T17:55:26.412Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-10T17:55:26.497Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-10T17:57:31.872Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-10T17:57:32.793Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-10T17:57:32.857Z"}
+{"level":"info","message":"Kafka Workflow producer is connected","service":"user-backend","timestamp":"2026-08-10T17:57:43.851Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-10T17:57:43.909Z"}
