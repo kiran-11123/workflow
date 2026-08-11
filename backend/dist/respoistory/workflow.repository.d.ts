@@ -292,7 +292,7 @@ export declare class WorkFlowRespository {
         __v: number;
     }, "id"> & mongoose.HydratedDocumentOverrides<{
         id: string;
-    }>)[]>;
+    }>) | null>;
     delete(id: string): Promise<void>;
 }
 //# sourceMappingURL=workflow.repository.d.ts.map

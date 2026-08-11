@@ -16,7 +16,9 @@ export class WorkFlowRespository {
         return await workflow_model.findByIdAndUpdate(new_id, data, { new: true });
     }
     async findByWorkFlowName(name) {
-        return await workflow_model.find({ workflow_name: name });
+        return await workflow_model.findOne({
+            workflow_name: name
+        });
     }
     async delete(id) {
         await workflow_model.findByIdAndDelete(id);

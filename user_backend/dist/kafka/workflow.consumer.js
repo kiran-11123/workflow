@@ -3,7 +3,7 @@ import workflow_producer from "./workflow.producer.js";
 import axios from 'axios';
 import logger from "../utils/logger.setup.js";
 const signup_flow_consumer = kafka.consumer({
-    groupId: 'signup-group'
+    groupId: 'signup-group-v2'
 });
 export async function ConnectConsumer() {
     await signup_flow_consumer.connect();
@@ -12,6 +12,7 @@ export async function ConnectConsumer() {
         topic: 'workflow-topic',
         fromBeginning: true
     });
+    logger.info(`Consumer for Signup flow is triggred`);
     await signup_flow_consumer.run({
         eachMessage: async ({ topic, partition, message }) => {
             const data = JSON.parse(message.value?.toString() || "{}");
@@ -23,8 +24,9 @@ export async function ConnectConsumer() {
             }
             let retries = 0;
             while (retries < 3) {
+                logger.info(`Request for Signup workflow is sending for email ${email}`);
                 try {
-                    const response = await axios.post(`http://localhost:5000/api/workflow/execute/sign`, {
+                    const response = await axios.post(`http://localhost:5000/api/workflow/execute/signup`, {
                         idempotent_key: idempotent_key,
                         email: email,
                         workflow_name: to
@@ -32,10 +34,16 @@ export async function ConnectConsumer() {
                     if (response.status === 200) {
                         logger.info(`Signup workflow executed successfully for email ${email}`);
                     }
+                    break;
                 }
                 catch (er) {
-                    logger.info(`Error occured while sending the data ${email} to signup workflow`);
                     retries += 1;
+                    logger.error(`Error while sending signup workflow request for ${email}`);
+                    logger.error(`Attempt: ${retries}`);
+                    logger.error(`Error message: ${er.message}`);
+                    logger.error(`Status: ${er.response?.status}`);
+                    logger.error(`Response: ${JSON.stringify(er.response?.data)}`);
+                    logger.error(`URL: ${er.config?.url}`);
                 }
             }
         }

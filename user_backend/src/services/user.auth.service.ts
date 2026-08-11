@@ -86,7 +86,15 @@ export class AuthService implements Authentication{
             password: hash_password
         });
 
-        const idempotent_key = crypto.randomUUIDv7();
+          await new_user.save();
+
+
+logger.info(
+    `Sending signup event to Kafka for ${email}`
+);
+
+
+        const idempotent_key = crypto.randomUUID();
 
         await workflow_producer.send({
             topic : 'workflow-topic',
@@ -102,7 +110,11 @@ export class AuthService implements Authentication{
             ]
         })
 
-        await new_user.save();
+        logger.info(
+    `Signup event successfully published to Kafka for ${email}`
+);
+
+      
         logger.info('User registered successfully', { email, username });
         return true;
     } catch (er) {

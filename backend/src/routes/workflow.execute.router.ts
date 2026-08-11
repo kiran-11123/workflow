@@ -4,7 +4,7 @@ import { WorkFlowExecutorController } from '../controllers/workflow.execute.cont
 const controller = new WorkFlowExecutorController();
 
 
-execute_router.post('/:id' , controller.execute.bind(controller))
+execute_router.post('/:id' , controller.signup_workflow_execute.bind(controller))
 
 
 

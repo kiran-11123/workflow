@@ -28,7 +28,9 @@ export class WorkFlowRespository{
     async findByWorkFlowName(name : string){
 
          
-        return await workflow_model.find({workflow_name : name})
+       return await workflow_model.findOne({
+        workflow_name: name
+    });
     }
 
     async delete(id : string){

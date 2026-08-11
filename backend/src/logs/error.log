@@ -1,0 +1,9 @@
+{"level":"error","message":"Error executing signup workflow: Error: Only published workflows can be executed","service":"workflow-backend","timestamp":"2026-08-11T17:15:36.230Z"}
+{"level":"error","message":"Error executing signup workflow: Error: Only published workflows can be executed","service":"workflow-backend","timestamp":"2026-08-11T17:15:36.322Z"}
+{"level":"error","message":"Error executing signup workflow: Error: Only published workflows can be executed","service":"workflow-backend","timestamp":"2026-08-11T17:15:36.526Z"}
+{"level":"error","message":"Error executing signup workflow: Error: Only published workflows can be executed","service":"workflow-backend","timestamp":"2026-08-11T17:20:12.754Z"}
+{"level":"error","message":"Error executing signup workflow: Error: Only published workflows can be executed","service":"workflow-backend","timestamp":"2026-08-11T17:20:13.158Z"}
+{"level":"error","message":"Error executing signup workflow: Error: Only published workflows can be executed","service":"workflow-backend","timestamp":"2026-08-11T17:20:13.250Z"}
+{"level":"error","message":"Error executing signup workflow: Error: Workflow undefined is not ACTIVE","service":"workflow-backend","timestamp":"2026-08-11T17:23:50.879Z"}
+{"level":"error","message":"Error executing signup workflow: Error: Workflow undefined is not ACTIVE","service":"workflow-backend","timestamp":"2026-08-11T17:23:51.092Z"}
+{"level":"error","message":"Error executing signup workflow: Error: Workflow undefined is not ACTIVE","service":"workflow-backend","timestamp":"2026-08-11T17:23:51.758Z"}

@@ -1,4 +1,4 @@
 export declare class EmailHandler {
-    sendEmail(config: any): Promise<boolean>;
+    sendEmail(email: string): Promise<boolean>;
 }
 //# sourceMappingURL=email.handler.d.ts.map
