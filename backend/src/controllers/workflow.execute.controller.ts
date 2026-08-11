@@ -1,9 +1,8 @@
 import type { Request , Response } from "express";
 import logger from "../utils/logger.setup.js";
-//import { ExecuteService } from "../services/workflow.execute.service.js";
+import { ExecuteSingupWorkFlow } from "../services/workflow.execute.service.js";
 
-
-//const execute_workflow = new ExecuteService();
+const execute_workflow = new ExecuteSingupWorkFlow();
 export class WorkFlowExecutorController{
 
 
@@ -21,7 +20,13 @@ export class WorkFlowExecutorController{
                     })
                 }
 
-               // const result = await execute_workflow.
+                const result = await execute_workflow.SignupWorkflow(email , idempotent_key, to);
+                logger.info(`Singup Workflow for email ${email} executed successfully `)
+                
+                return res.status(200).json({
+                    message  :'Singup Workflow executed successfully'
+                })
+                return result;
                 
     
              }

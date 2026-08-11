@@ -1,6 +1,6 @@
 import logger from "../utils/logger.setup.js";
-//import { ExecuteService } from "../services/workflow.execute.service.js";
-//const execute_workflow = new ExecuteService();
+import { ExecuteSingupWorkFlow } from "../services/workflow.execute.service.js";
+const execute_workflow = new ExecuteSingupWorkFlow();
 export class WorkFlowExecutorController {
     async signup_workflow_execute(req, res) {
         logger.info(`Entered into the signup workflow execute controller`);
@@ -12,7 +12,12 @@ export class WorkFlowExecutorController {
                     message: 'Fields required for signup flow are missing'
                 });
             }
-            // const result = await execute_workflow.
+            const result = await execute_workflow.SignupWorkflow(email, idempotent_key, to);
+            logger.info(`Singup Workflow for email ${email} executed successfully `);
+            return res.status(200).json({
+                message: 'Singup Workflow executed successfully'
+            });
+            return result;
         }
         catch (er) {
             logger.info(`Error while triggering the signup flow workflow ${er}`);
