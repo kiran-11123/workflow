@@ -45,3 +45,9 @@
 {"level":"info","message":"Consumer for Signup flow is triggred","service":"user-backend","timestamp":"2026-08-12T13:45:26.283Z"}
 {"level":"info","message":"Kafka Workflow producer is connected","service":"user-backend","timestamp":"2026-08-12T13:45:33.620Z"}
 {"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-12T13:45:33.722Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-12T13:50:14.224Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-12T13:50:18.684Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-12T13:50:18.794Z"}
+{"level":"info","message":"Consumer for Signup flow is triggred","service":"user-backend","timestamp":"2026-08-12T13:50:19.128Z"}
+{"level":"info","message":"Kafka Workflow producer is connected","service":"user-backend","timestamp":"2026-08-12T13:50:19.592Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-12T13:50:19.690Z"}

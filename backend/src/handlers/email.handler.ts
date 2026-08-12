@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
 
 export class EmailHandler{
     
-    async sendEmail(email: string){
+    async sendEmailSignup(email: string){
         logger.info(`Entered into mail handler for email ${email}`)    
         try{
         

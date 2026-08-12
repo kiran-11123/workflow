@@ -92,7 +92,8 @@ export class SingupExecuteEngine implements AllExecuteEngines{
             case NodeType.EMAIL:
                 logger.info(`Email node started`)
                 try{
-                const result :any =await email_handler.sendEmail(email);
+                    
+                 const result :any =await email_handler.sendEmailSignup(email);
                      if(result==true){
                         logger.info(`Email node executed successfully`)
                      }
