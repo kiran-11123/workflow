@@ -22,6 +22,7 @@
     "kafkajs": "^2.2.4",
     "mongoose": "^9.9.2",
     "morgan": "^1.11.0",
+    "node-cron": "^4.6.0",
     "winston": "^3.19.0"
   },
   "devDependencies": {
