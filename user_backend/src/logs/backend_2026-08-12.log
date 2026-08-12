@@ -60,3 +60,12 @@
 {"level":"info","message":"Request for Signup workflow is sending for email kiran.sadara6730@gmail.com","service":"user-backend","timestamp":"2026-08-12T14:12:07.133Z"}
 {"level":"info","message":"Signup workflow executed successfully for email kiran.sadara6730@gmail.com","service":"user-backend","timestamp":"2026-08-12T14:12:13.965Z"}
 {"level":"info","message":"Offset 7 committed","service":"user-backend","timestamp":"2026-08-12T14:12:14.090Z"}
+{"email":"kiran.sadara6730@gmail.com","level":"info","message":"Sign up request received","service":"user-backend","timestamp":"2026-08-12T14:41:25.635Z","username":"kiran_24"}
+{"email":"kiran.sadara6730@gmail.com","level":"info","message":"Registering new user","service":"user-backend","timestamp":"2026-08-12T14:41:25.741Z","username":"kiran_24"}
+{"level":"info","message":"Sending signup event to Kafka for kiran.sadara6730@gmail.com","service":"user-backend","timestamp":"2026-08-12T14:41:26.228Z"}
+{"level":"info","message":"Signup event successfully published to Kafka for kiran.sadara6730@gmail.com","service":"user-backend","timestamp":"2026-08-12T14:41:26.612Z"}
+{"email":"kiran.sadara6730@gmail.com","level":"info","message":"User registered successfully","service":"user-backend","timestamp":"2026-08-12T14:41:26.613Z","username":"kiran_24"}
+{"email":"kiran.sadara6730@gmail.com","level":"info","message":"User registered successfully","service":"user-backend","timestamp":"2026-08-12T14:41:26.613Z","username":"kiran_24"}
+{"level":"info","message":"Request for Signup workflow is sending for email kiran.sadara6730@gmail.com","service":"user-backend","timestamp":"2026-08-12T14:41:26.688Z"}
+{"level":"info","message":"Signup workflow executed successfully for email kiran.sadara6730@gmail.com","service":"user-backend","timestamp":"2026-08-12T14:41:31.247Z"}
+{"level":"info","message":"Offset 6 committed","service":"user-backend","timestamp":"2026-08-12T14:41:31.503Z"}

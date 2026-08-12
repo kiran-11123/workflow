@@ -33,3 +33,30 @@
 {"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-12T14:36:17.003Z"}
 {"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-12T14:37:57.734Z"}
 {"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-12T14:37:57.798Z"}
+{"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-12T14:39:44.093Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-12T14:39:44.186Z"}
+{"level":"info","message":"New Create workflow is triggered","service":"workflow-backend","timestamp":"2026-08-12T14:40:13.093Z"}
+{"level":"info","message":"Got Error while creating the workflow MongoServerError: E11000 duplicate key error collection: test.workflows index: _id_ dup key: { _id: ObjectId('6a7b59baf6536bb04b2b3417') }","service":"workflow-backend","timestamp":"2026-08-12T14:40:13.234Z"}
+{"level":"info","message":"New Create workflow is triggered","service":"workflow-backend","timestamp":"2026-08-12T14:40:46.900Z"}
+{"level":"info","message":"WorkFlow created successfully","service":"workflow-backend","timestamp":"2026-08-12T14:40:46.992Z"}
+{"level":"info","message":"Entered into the signup workflow execute controller","service":"workflow-backend","timestamp":"2026-08-12T14:41:26.697Z"}
+{"level":"info","message":"Entered into signup workflow execution service for email kiran.sadara6730@gmail.com","service":"workflow-backend","timestamp":"2026-08-12T14:41:26.697Z"}
+{"level":"info","message":"Workflow found: Signup Flow, status: ACTIVE","service":"workflow-backend","timestamp":"2026-08-12T14:41:26.774Z"}
+{"level":"info","message":"Workflow execution status set to RUNNING","service":"workflow-backend","timestamp":"2026-08-12T14:41:26.960Z"}
+{"level":"info","message":"Workflow engine started for workflow Signup Flow","service":"workflow-backend","timestamp":"2026-08-12T14:41:26.960Z"}
+{"level":"info","message":"Starting workflow from node start-1","service":"workflow-backend","timestamp":"2026-08-12T14:41:26.961Z"}
+{"level":"info","message":"Executing node start-1 of type START","service":"workflow-backend","timestamp":"2026-08-12T14:41:26.961Z"}
+{"level":"info","message":"Start node executed","service":"workflow-backend","timestamp":"2026-08-12T14:41:26.962Z"}
+{"level":"info","message":"workflow of type { id: 'start-1', type: 'START' } executed successfully","service":"workflow-backend","timestamp":"2026-08-12T14:41:26.962Z"}
+{"level":"info","message":"Executing node email-1 of type EMAIL","service":"workflow-backend","timestamp":"2026-08-12T14:41:26.963Z"}
+{"level":"info","message":"Email node started","service":"workflow-backend","timestamp":"2026-08-12T14:41:26.963Z"}
+{"level":"info","message":"Email node executed successfully","service":"workflow-backend","timestamp":"2026-08-12T14:41:31.150Z"}
+{"level":"info","message":"workflow of type {\n  id: 'email-1',\n  type: 'EMAIL',\n  config: {\n    from: 'eventnest.official.main@gmail.com',\n    subject: 'Welcome to EventNest',\n    text: 'Hello! Your account has been created successfully. Welcome to EventNest.',\n    html: '<div style=\"font-family: Arial, sans-serif; padding: 20px;\"><h1>Welcome to EventNest!</h1><p>Your account has been created successfully.</p><p>Thank you for joining us.</p></div>'\n  }\n} executed successfully","service":"workflow-backend","timestamp":"2026-08-12T14:41:31.151Z"}
+{"level":"info","message":"Executing node end-1 of type END","service":"workflow-backend","timestamp":"2026-08-12T14:41:31.152Z"}
+{"level":"info","message":"End node executed","service":"workflow-backend","timestamp":"2026-08-12T14:41:31.152Z"}
+{"level":"info","message":"workflow of type { id: 'end-1', type: 'END' } executed successfully","service":"workflow-backend","timestamp":"2026-08-12T14:41:31.152Z"}
+{"level":"info","message":"Workflow Signup Flow reached END node","service":"workflow-backend","timestamp":"2026-08-12T14:41:31.152Z"}
+{"level":"info","message":"Signup workflow completed successfully for kiran.sadara6730@gmail.com","service":"workflow-backend","timestamp":"2026-08-12T14:41:31.241Z"}
+{"level":"info","message":"Singup Workflow for email kiran.sadara6730@gmail.com executed successfully ","service":"workflow-backend","timestamp":"2026-08-12T14:41:31.242Z"}
+{"level":"info","message":"New Create workflow is triggered","service":"workflow-backend","timestamp":"2026-08-12T14:49:44.528Z"}
+{"level":"info","message":"WorkFlow created successfully","service":"workflow-backend","timestamp":"2026-08-12T14:49:44.692Z"}
