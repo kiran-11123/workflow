@@ -13,8 +13,6 @@ export class WorkFlowExecutorController{
     
                 const {email , idempotent_key , workflow_name} = req.body;
 
-                console.log(email , idempotent_key , workflow_name)
-
                 if(!email || !idempotent_key || !workflow_name){
                     logger.info(`Fields required for signup flow are missing for email ${email}`)
                     return res.status(400).json({

@@ -18,6 +18,7 @@ export class ExecuteSingupWorkFlow {
             logger.info(`Workflow found: ${workflow.workflow_name}, status: ${workflow.status}`);
             // 2. Check workflow status
             if (workflow.status !== WorkflowStatus.ACTIVE) {
+                logger.info(`Workflow ${workflow.workflow_name} is not ACTIVE`);
                 throw new Error(`Workflow ${workflow.workflow_name} is not ACTIVE`);
             }
             // 3. Check idempotency
@@ -32,6 +33,7 @@ export class ExecuteSingupWorkFlow {
             // 4. Create execution record
             new_status = new workflow_status({
                 email,
+                workflow_name: to,
                 idempotent_key,
                 status: "RUNNING"
             });
@@ -40,8 +42,10 @@ export class ExecuteSingupWorkFlow {
             // 5. Execute workflow
             const result = await engine.SingupFlowEngine(workflow, email);
             // 6. Mark completed
-            new_status.status = "COMPLETED";
-            await new_status.save();
+            if (result == true) {
+                new_status.status = "COMPLETED";
+                await new_status.save();
+            }
             logger.info(`Signup workflow completed successfully for ${email}`);
             return JSON.stringify(result);
         }

@@ -47,7 +47,7 @@ export class ExecuteSingupWorkFlow implements AllWorkFlows {
 
             // 2. Check workflow status
             if (workflow.status !== WorkflowStatus.ACTIVE) {
-
+                logger.info(`Workflow ${(workflow as any).workflow_name} is not ACTIVE`)
                 throw new Error(
                     `Workflow ${(workflow as any).workflow_name} is not ACTIVE`
                 );
@@ -72,6 +72,7 @@ export class ExecuteSingupWorkFlow implements AllWorkFlows {
             // 4. Create execution record
             new_status = new workflow_status({
                 email,
+                workflow_name : to,
                 idempotent_key,
                 status: "RUNNING"
             });
@@ -90,10 +91,13 @@ export class ExecuteSingupWorkFlow implements AllWorkFlows {
                 );
 
             // 6. Mark completed
-            new_status.status = "COMPLETED";
 
-            await new_status.save();
+            if(result==true){
 
+               new_status.status = "COMPLETED";
+              await new_status.save();
+
+            }
             logger.info(
                 `Signup workflow completed successfully for ${email}`
             );
