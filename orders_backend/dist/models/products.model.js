@@ -37,5 +37,5 @@ const ProductSchema = new Schema({
     timestamps: true,
     collection: 'products'
 });
-export const Product = mongoose.model('Product', ProductSchema);
+export const product_model = mongoose.model('Product', ProductSchema);
 //# sourceMappingURL=products.model.js.map

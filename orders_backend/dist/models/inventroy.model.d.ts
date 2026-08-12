@@ -7,7 +7,7 @@ export interface IInventory extends Document {
     createdAt: Date;
     updatedAt: Date;
 }
-export declare const Inventory: mongoose.Model<IInventory, {}, {}, {}, Document<unknown, {}, IInventory, {}, mongoose.DefaultSchemaOptions> & IInventory & Required<{
+export declare const inventory_model: mongoose.Model<IInventory, {}, {}, {}, Document<unknown, {}, IInventory, {}, mongoose.DefaultSchemaOptions> & IInventory & Required<{
     _id: mongoose.Types.ObjectId;
 }> & {
     __v: number;

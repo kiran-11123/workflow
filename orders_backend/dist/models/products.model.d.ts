@@ -15,7 +15,7 @@ export interface IProduct extends Document {
     createdAt: Date;
     updatedAt: Date;
 }
-export declare const Product: mongoose.Model<IProduct, {}, {}, {}, Document<unknown, {}, IProduct, {}, mongoose.DefaultSchemaOptions> & IProduct & Required<{
+export declare const product_model: mongoose.Model<IProduct, {}, {}, {}, Document<unknown, {}, IProduct, {}, mongoose.DefaultSchemaOptions> & IProduct & Required<{
     _id: mongoose.Types.ObjectId;
 }> & {
     __v: number;

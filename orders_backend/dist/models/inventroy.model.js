@@ -29,5 +29,5 @@ const InventorySchema = new Schema({
     timestamps: true,
     collection: 'inventory'
 });
-export const Inventory = mongoose.model('Inventory', InventorySchema);
+export const inventory_model = mongoose.model('Inventory', InventorySchema);
 //# sourceMappingURL=inventroy.model.js.map

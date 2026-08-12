@@ -60,7 +60,7 @@ const ProductSchema = new Schema<IProduct>(
     
 )
 
-export const Product = mongoose.model<IProduct>(
+export const product_model = mongoose.model<IProduct>(
     'Product',
     ProductSchema
 );

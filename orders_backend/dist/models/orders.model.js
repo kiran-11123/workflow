@@ -35,5 +35,5 @@ const OrderSchema = new Schema({
     timestamps: true,
     collection: 'orders'
 });
-export const Order = mongoose.model('Order', OrderSchema);
+export const orders_model = mongoose.model('Order', OrderSchema);
 //# sourceMappingURL=orders.model.js.map

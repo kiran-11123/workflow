@@ -52,7 +52,7 @@ const OrderSchema = new Schema<IOrder>(
     }
 );
 
-export const Order = mongoose.model<IOrder>(
+export const orders_model = mongoose.model<IOrder>(
     'Order',
     OrderSchema
 );
