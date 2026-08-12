@@ -2,7 +2,7 @@ import logger from "../utils/logger.setup.js";
 import { type INode , type IEdge, WorkflowStatus, NodeType } from "../types/workflow.types.js";
 import { EmailHandler } from "../handlers/email.handler.js";
 
-const email_handler = new EmailHandler();
+const email_handler = EmailHandler.getInstance();
 
 interface AllExecuteEngines{
      SingupFlowEngine(workflow :any , email : string) : Promise<boolean>
@@ -93,7 +93,7 @@ export class SingupExecuteEngine implements AllExecuteEngines{
                 logger.info(`Email node started`)
                 try{
                     
-                 const result :any =await email_handler.sendEmailSignup(email);
+                 const result :any =await email_handler.sendEmail({to : email , subject : node.config.subject , text : node.config.text ,html:node.config.html});
                      if(result==true){
                         logger.info(`Email node executed successfully`)
                      }

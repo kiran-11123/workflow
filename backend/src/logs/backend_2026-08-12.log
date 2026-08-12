@@ -25,3 +25,11 @@
 {"level":"info","message":"Workflow Signup Flow reached END node","service":"workflow-backend","timestamp":"2026-08-12T14:12:13.852Z"}
 {"level":"info","message":"Signup workflow completed successfully for kiran.sadara6730@gmail.com","service":"workflow-backend","timestamp":"2026-08-12T14:12:13.946Z"}
 {"level":"info","message":"Singup Workflow for email kiran.sadara6730@gmail.com executed successfully ","service":"workflow-backend","timestamp":"2026-08-12T14:12:13.947Z"}
+{"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-12T14:19:37.523Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-12T14:19:37.608Z"}
+{"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-12T14:32:35.603Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-12T14:32:35.681Z"}
+{"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-12T14:36:16.889Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-12T14:36:17.003Z"}
+{"level":"info","message":"MongoDB is connected","service":"workflow-backend","timestamp":"2026-08-12T14:37:57.734Z"}
+{"level":"info","message":"WorkFlow Server is running on PORT 5000","service":"workflow-backend","timestamp":"2026-08-12T14:37:57.798Z"}

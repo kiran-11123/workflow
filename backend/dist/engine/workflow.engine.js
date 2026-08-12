@@ -1,7 +1,7 @@
 import logger from "../utils/logger.setup.js";
 import { WorkflowStatus, NodeType } from "../types/workflow.types.js";
 import { EmailHandler } from "../handlers/email.handler.js";
-const email_handler = new EmailHandler();
+const email_handler = EmailHandler.getInstance();
 export class SingupExecuteEngine {
     async SingupFlowEngine(workflow, email) {
         logger.info(`Workflow engine started for workflow ${workflow.workflow_name}`);
@@ -46,7 +46,7 @@ export class SingupExecuteEngine {
             case NodeType.EMAIL:
                 logger.info(`Email node started`);
                 try {
-                    const result = await email_handler.sendEmailSignup(email);
+                    const result = await email_handler.sendEmail({ to: email, subject: node.config.subject, text: node.config.text, html: node.config.html });
                     if (result == true) {
                         logger.info(`Email node executed successfully`);
                     }
