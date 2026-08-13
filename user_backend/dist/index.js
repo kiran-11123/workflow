@@ -10,6 +10,7 @@ import rateLimit from 'express-rate-limit';
 import auth_router from './routes/user.auth.routes.js';
 import { ConnectConsumer } from './kafka/workflow.consumer.js';
 import { ConnectProducer } from './kafka/workflow.producer.js';
+import circuit_breaker_test from './routes/user.breaker.js';
 const PORT = process.env.PORT;
 const app = express();
 app.use(cors());
@@ -28,6 +29,7 @@ const Limiter = rateLimit({
 });
 app.use(Limiter);
 app.use('/api/auth', auth_router);
+app.use('/api/test', circuit_breaker_test);
 app.listen(PORT, () => {
     logger.info(`Users backend server is running in PORT ${PORT}`);
 });

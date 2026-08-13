@@ -1,0 +1,17 @@
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-13T18:25:43.943Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-13T18:25:46.104Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-13T18:30:10.397Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-13T18:30:12.387Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-13T18:30:12.729Z"}
+{"level":"info","message":"Consumer for Signup flow is triggred","service":"user-backend","timestamp":"2026-08-13T18:30:12.900Z"}
+{"level":"info","message":"Kafka Workflow producer is connected","service":"user-backend","timestamp":"2026-08-13T18:30:13.465Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-13T18:30:13.528Z"}
+{"level":"info","message":"kafka connected","service":"user-backend","timestamp":"2026-08-13T18:33:15.756Z"}
+{"level":"info","message":"MongoDB is connected","service":"user-backend","timestamp":"2026-08-13T18:33:18.376Z"}
+{"level":"info","message":"Kafka Workflow consumer is connected","service":"user-backend","timestamp":"2026-08-13T18:33:19.109Z"}
+{"level":"info","message":"Consumer for Signup flow is triggred","service":"user-backend","timestamp":"2026-08-13T18:33:19.229Z"}
+{"level":"info","message":"Kafka Workflow producer is connected","service":"user-backend","timestamp":"2026-08-13T18:33:19.374Z"}
+{"level":"info","message":"Users backend server is running in PORT 5001","service":"user-backend","timestamp":"2026-08-13T18:33:19.460Z"}
+{"level":"info","message":"Entered into circuit breaker testing controller","service":"user-backend","timestamp":"2026-08-13T18:33:26.218Z"}
+{"level":"info","message":"Entered into circuit breaker testing controller","service":"user-backend","timestamp":"2026-08-13T18:33:48.862Z"}
+{"level":"info","message":"Log retention job started","service":"user-backend","timestamp":"2026-08-13T18:35:00.015Z"}

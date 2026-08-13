@@ -1,0 +1,1 @@
+{"version":3,"file":"workflow.client.js","sourceRoot":"","sources":["../../src/clients/workflow.client.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAA;AAEzB,MAAM,CAAC,KAAK,UAAU,oBAAoB;IAErC,MAAM,QAAQ,GAAG,MAAM,KAAK,CAAC,GAAG,CAAC,8BAA8B,CAAC,CAAA;IAChE,OAAO,QAAQ,CAAC,IAAI,CAAC;AAE1B,CAAC"}

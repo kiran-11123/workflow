@@ -63,7 +63,7 @@ export class ProductController {
     async UpdateProduct(req, res) {
         logger.info('Entered into product update controller');
         try {
-            const { product_id, price, status } = req.body;
+            let { product_id, price, status } = req.body;
             if (!product_id) {
                 return res.status(400).json({
                     message: 'Product ID is required'
@@ -74,6 +74,7 @@ export class ProductController {
                     message: 'At least one field is required to update'
                 });
             }
+            price = Number(price);
             if (price !== undefined && (typeof price !== 'number' || price < 0)) {
                 return res.status(400).json({
                     message: 'Price must be a valid positive number'
