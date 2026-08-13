@@ -10,6 +10,13 @@ export enum OrderStatus {
     FAILED = 'FAILED'
 }
 
+export enum PaymentMethods{
+    CREDITCARD = 'CREDITCARD',
+    DEBITCARD = 'DEBITCARD',
+    CASH = 'CASH',
+    UPI  = 'UPI'
+}
+
 export interface IOrder extends Document {
     userId: string;
     productId: mongoose.Types.ObjectId;
@@ -17,6 +24,7 @@ export interface IOrder extends Document {
     status: OrderStatus;
     totalAmount: number;
     currency: string;
+    PaymentMode : string;
     createdAt: Date;
     updatedAt: Date;
 }
@@ -31,7 +39,6 @@ const OrderSchema = new Schema<IOrder>(
         productId: {
             type: mongoose.Schema.Types.ObjectId,
             required: true,
-            unique: true,
             ref: 'Product'
         },
         quantity: {
@@ -56,6 +63,12 @@ const OrderSchema = new Schema<IOrder>(
             type: String,
             default: 'INR',
             uppercase: true
+        },
+        PaymentMode:{
+             type : String,
+             enum : Object.values(PaymentMethods),
+             default : PaymentMethods.CASH,
+             uppercase:true
         }
     },
     {

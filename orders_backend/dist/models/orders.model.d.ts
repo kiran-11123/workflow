@@ -8,6 +8,12 @@ export declare enum OrderStatus {
     CANCELLED = "CANCELLED",
     FAILED = "FAILED"
 }
+export declare enum PaymentMethods {
+    CREDITCARD = "CREDITCARD",
+    DEBITCARD = "DEBITCARD",
+    CASH = "CASH",
+    UPI = "UPI"
+}
 export interface IOrder extends Document {
     userId: string;
     productId: mongoose.Types.ObjectId;
@@ -15,6 +21,7 @@ export interface IOrder extends Document {
     status: OrderStatus;
     totalAmount: number;
     currency: string;
+    PaymentMode: string;
     createdAt: Date;
     updatedAt: Date;
 }

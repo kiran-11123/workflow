@@ -1,4 +1,3 @@
-import type { promises } from "node:dns";
 import { inventory_model } from "../models/inventroy.model.js";
 import mongoose from "mongoose";
 
