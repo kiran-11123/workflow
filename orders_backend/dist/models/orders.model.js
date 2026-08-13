@@ -15,6 +15,16 @@ const OrderSchema = new Schema({
         required: true,
         index: true
     },
+    productId: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        unique: true,
+        ref: 'Product'
+    },
+    quantity: {
+        type: Number,
+        required: true
+    },
     status: {
         type: String,
         enum: Object.values(OrderStatus),

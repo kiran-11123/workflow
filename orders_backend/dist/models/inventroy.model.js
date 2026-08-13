@@ -12,18 +12,6 @@ const InventorySchema = new Schema({
         required: true,
         default: 0,
         min: 0
-    },
-    reservedStock: {
-        type: Number,
-        required: true,
-        default: 0,
-        min: 0
-    },
-    reorderLevel: {
-        type: Number,
-        required: true,
-        default: 10,
-        min: 0
     }
 }, {
     timestamps: true,

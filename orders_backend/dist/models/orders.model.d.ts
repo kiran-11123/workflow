@@ -10,6 +10,8 @@ export declare enum OrderStatus {
 }
 export interface IOrder extends Document {
     userId: string;
+    productId: mongoose.Types.ObjectId;
+    quantity: number;
     status: OrderStatus;
     totalAmount: number;
     currency: string;

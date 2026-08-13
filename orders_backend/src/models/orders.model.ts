@@ -12,6 +12,8 @@ export enum OrderStatus {
 
 export interface IOrder extends Document {
     userId: string;
+    productId: mongoose.Types.ObjectId;
+    quantity: number;
     status: OrderStatus;
     totalAmount: number;
     currency: string;
@@ -25,6 +27,16 @@ const OrderSchema = new Schema<IOrder>(
             type: String,
             required: true,
             index: true
+        },
+        productId: {
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
+            unique: true,
+            ref: 'Product'
+        },
+        quantity: {
+            type: Number,
+            required: true
         },
 
         status: {
