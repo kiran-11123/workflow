@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+import logger from "../utils/log.configuration.js";
 
 export class MongooseConnection{
      private static connection : typeof mongoose | null = null;
@@ -13,7 +13,7 @@ export class MongooseConnection{
             }
 
             this.connection = await mongoose.connect(url)
-       //  logger.info(`MongoDB is connected`)
+         logger.info(`MongoDB is connected`)
         return this.connection;
           
           }
@@ -34,7 +34,7 @@ async function ConnectDB(){
 
     }
     catch(er){
-        // logger.info(`Getting error while connection to mongoose ${er}`)
+         logger.info(`Getting error while connection to mongoose ${er}`)
     }
       
 } 

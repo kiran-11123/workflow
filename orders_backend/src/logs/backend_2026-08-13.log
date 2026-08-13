@@ -40,3 +40,45 @@
 {"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:05:51.436Z"}
 {"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:06:06.869Z"}
 {"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:06:11.293Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:14:07.481Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:14:07.492Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:17:29.637Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:17:29.652Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:18:15.527Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:18:15.543Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:18:35.647Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:18:35.655Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:19:07.292Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:19:07.299Z"}
+{"level":"info","message":"Entered into Add Product Controller","service":"orders-backend","timestamp":"2026-08-13T17:19:11.570Z"}
+{"level":"info","message":"Entered into the AddProduct service for product : iPhone 17","service":"orders-backend","timestamp":"2026-08-13T17:19:11.571Z"}
+{"level":"info","message":"Product : iPhone 17 is added to the table","service":"orders-backend","timestamp":"2026-08-13T17:19:11.666Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:20:48.760Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:20:48.767Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:20:53.651Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:20:53.662Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:20:58.124Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:20:58.135Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:21:14.390Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:21:14.401Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:21:19.630Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:21:19.637Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:21:30.890Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:21:30.905Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:21:35.680Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:21:35.690Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:22:07.423Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:22:07.438Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:22:15.097Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:22:15.114Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:22:21.411Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:22:21.421Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:22:29.127Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:22:29.137Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:25:10.199Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:25:10.207Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:25:16.008Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:25:16.017Z"}
+{"level":"info","message":"Entered into Update Inventory Controller","service":"orders-backend","timestamp":"2026-08-13T17:25:50.697Z"}
+{"level":"info","message":"Entered into update inventory for product update","service":"orders-backend","timestamp":"2026-08-13T17:25:50.698Z"}
+{"level":"error","message":"Error while updating the inventory for the product : BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer","service":"orders-backend","timestamp":"2026-08-13T17:25:50.698Z"}

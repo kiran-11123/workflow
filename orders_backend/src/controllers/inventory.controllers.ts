@@ -1,7 +1,6 @@
 import { InventoryService } from "../services/inventory.services.js";
 import type { Request , Response } from "express";
 import logger from "../utils/log.configuration.js";
-import { log } from "node:console";
 const inventory_service = new InventoryService();
 
 
@@ -11,9 +10,7 @@ export class InventoryController{
         logger.info(`Entered into Update Inventory Controller`)
         try{
             
-            const product_id = Array.isArray(req.params.id)
-                    ? req.params.id[0]
-                    : req.params.id;
+            const product_id = req.body.product_id;
 
             if(!product_id){
                 logger.info(`Product Id is missing`)
@@ -46,4 +43,6 @@ export class InventoryController{
              
         }
     }
+   
+    
 }

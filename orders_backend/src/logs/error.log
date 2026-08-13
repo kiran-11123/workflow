@@ -1,0 +1,1 @@
+{"level":"error","message":"Error while updating the inventory for the product : BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer","service":"orders-backend","timestamp":"2026-08-13T17:25:50.698Z"}

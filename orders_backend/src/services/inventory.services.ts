@@ -1,5 +1,6 @@
 import { inventory_model } from "../models/inventroy.model.js";
 import mongoose from "mongoose";
+import logger from "../utils/log.configuration.js";
 
 interface Inventory{
      UpdateInventory(product_id : string ,  stock : number ) : Promise<boolean> 
@@ -11,6 +12,8 @@ export class InventoryService implements Inventory{
     product_id: string,
     stock: number
 ): Promise<boolean> {
+
+    logger.info(`Entered into update inventory for product ${product_id}`)
 
     try {
         const product_id_new = new mongoose.Types.ObjectId(product_id);
@@ -25,7 +28,8 @@ export class InventoryService implements Inventory{
                 }
             },
             {
-                new: true
+                new: true,
+                upsert: true
             }
         );
 
@@ -39,5 +43,6 @@ export class InventoryService implements Inventory{
         throw er;
     }
 }
+
 
 }
