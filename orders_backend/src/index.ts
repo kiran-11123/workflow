@@ -15,12 +15,16 @@ await ConnectDB()
 
 
 
-app.use('/app/products' , product_router)
-app.use('/app/inventory' , inventory_router)
-app.use('/app/orders' , orders_router)
+app.use('/api/products' , product_router)
+app.use('/api/inventory' , inventory_router)
+app.use('/api/orders' , orders_router)
 
 
-
+app.get('/health' , (req,res)=>{
+       return res.status(200).json({
+           message : 'Orders backend is healthy'
+       })
+})
 
 app.listen(PORT , ()=>{
      logger.info(`orders backend is running on PORT ${PORT}`)
