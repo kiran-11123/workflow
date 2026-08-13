@@ -33,9 +33,9 @@ export class ProductController {
     async DeleteProduct(req, res) {
         logger.info(`Entered into Delete Product controller`);
         try {
-            const product_id = Array.isArray(req.params.product_id)
-                ? req.params.product_id[0]
-                : req.params.product_id;
+            const product_id = Array.isArray(req.params.id)
+                ? req.params.id[0]
+                : req.params.id;
             if (!product_id) {
                 logger.error(`Product id is missing`);
                 return res.status(400).json({

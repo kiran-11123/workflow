@@ -3,9 +3,7 @@ const execute_router = express.Router();
 import { WorkFlowExecutorController } from '../controllers/workflow.execute.controller.js';
 const controller = new WorkFlowExecutorController();
 
-
-execute_router.post('/:id' , controller.signup_workflow_execute.bind(controller))
-
-
+// Execute signup workflow
+execute_router.post('/signup', controller.signup_workflow_execute.bind(controller))
 
 export default execute_router;

@@ -9,11 +9,27 @@ export var OrderStatus;
     OrderStatus["CANCELLED"] = "CANCELLED";
     OrderStatus["FAILED"] = "FAILED";
 })(OrderStatus || (OrderStatus = {}));
+export var PaymentMethods;
+(function (PaymentMethods) {
+    PaymentMethods["CREDITCARD"] = "CREDITCARD";
+    PaymentMethods["DEBITCARD"] = "DEBITCARD";
+    PaymentMethods["CASH"] = "CASH";
+    PaymentMethods["UPI"] = "UPI";
+})(PaymentMethods || (PaymentMethods = {}));
 const OrderSchema = new Schema({
     userId: {
         type: String,
         required: true,
         index: true
+    },
+    productId: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'Product'
+    },
+    quantity: {
+        type: Number,
+        required: true
     },
     status: {
         type: String,
@@ -29,6 +45,12 @@ const OrderSchema = new Schema({
     currency: {
         type: String,
         default: 'INR',
+        uppercase: true
+    },
+    PaymentMode: {
+        type: String,
+        enum: Object.values(PaymentMethods),
+        default: PaymentMethods.CASH,
         uppercase: true
     }
 }, {
