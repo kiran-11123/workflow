@@ -5,7 +5,8 @@ export class OrderController {
     async CreateOrder(req, res) {
         logger.info('Entered into Create Order Controller');
         try {
-            const { user_id, product_id, quantity } = req.body;
+            const { product_id, quantity } = req.body;
+            const user_id = req.user?.user_id;
             // Validate required fields
             if (!user_id || !product_id || !quantity) {
                 logger.info('Required fields missing for order creation');
@@ -57,7 +58,8 @@ export class OrderController {
     async CancelOrder(req, res) {
         logger.info('Entered into Cancel Order Controller');
         try {
-            const { user_id, order_id } = req.body;
+            const { order_id } = req.body;
+            const user_id = req.user?.user_id;
             if (!user_id || !order_id) {
                 logger.info('Required fields missing for order cancellation');
                 return res.status(400).json({
@@ -91,7 +93,8 @@ export class OrderController {
     async GetOrderStatus(req, res) {
         logger.info('Entered into Get Order Status Controller');
         try {
-            const { user_id, order_id } = req.query;
+            const { order_id } = req.query;
+            const user_id = req.user?.user_id;
             if (!user_id || !order_id) {
                 logger.info('Required query parameters missing');
                 return res.status(400).json({
@@ -121,7 +124,8 @@ export class OrderController {
     async UpdateOrder(req, res) {
         logger.info('Entered into Update Order Controller');
         try {
-            const { user_id, order_id, status } = req.body;
+            const { order_id, status } = req.body;
+            const user_id = req.user?.user_id;
             if (!user_id || !order_id || !status) {
                 logger.info('Required fields missing for order update');
                 return res.status(400).json({
@@ -155,8 +159,7 @@ export class OrderController {
     async GetUserOrders(req, res) {
         logger.info('Entered into Get User Orders Controller');
         try {
-            const { user_id } = req.params;
-            const userId = Array.isArray(user_id) ? user_id[0] : user_id;
+            const userId = req.user?.user_id;
             if (!userId) {
                 logger.info('User ID missing in request');
                 return res.status(400).json({
@@ -164,7 +167,7 @@ export class OrderController {
                 });
             }
             const result = await order_service.getUserOrders(userId);
-            logger.info(`Orders retrieved for user ${user_id}`);
+            logger.info(`Orders retrieved for user ${userId}`);
             return res.status(200).json({
                 message: 'Orders retrieved successfully',
                 data: result,
