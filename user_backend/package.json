@@ -15,6 +15,7 @@
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^26.2.0",
+    "@types/opossum": "^8.1.9",
     "tsx": "^4.23.12",
     "typescript": "^7.0.2"
   },
@@ -35,6 +36,7 @@
     "kafkajs": "^2.2.4",
     "mongoose": "^9.9.1",
     "node-cron": "^4.6.0",
+    "opossum": "^10.0.0",
     "winston": "^3.19.0"
   }
 }

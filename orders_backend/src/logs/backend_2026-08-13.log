@@ -82,3 +82,12 @@
 {"level":"info","message":"Entered into Update Inventory Controller","service":"orders-backend","timestamp":"2026-08-13T17:25:50.697Z"}
 {"level":"info","message":"Entered into update inventory for product update","service":"orders-backend","timestamp":"2026-08-13T17:25:50.698Z"}
 {"level":"error","message":"Error while updating the inventory for the product : BSONError: input must be a 24 character hex string, 12 byte Uint8Array, or an integer","service":"orders-backend","timestamp":"2026-08-13T17:25:50.698Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:26:19.395Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:26:19.404Z"}
+{"level":"info","message":"Entered into Update Inventory Controller","service":"orders-backend","timestamp":"2026-08-13T17:26:24.144Z"}
+{"level":"info","message":"Entered into update inventory for product 6a7dfc8f3c41b39a414ceda9","service":"orders-backend","timestamp":"2026-08-13T17:26:24.144Z"}
+{"level":"info","message":"Inventory for Product : 6a7dfc8f3c41b39a414ceda9 is updated successfully","service":"orders-backend","timestamp":"2026-08-13T17:26:24.204Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:29:08.362Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:29:08.374Z"}
+{"level":"info","message":"MongoDB is connected","service":"orders-backend","timestamp":"2026-08-13T17:29:15.581Z"}
+{"level":"info","message":"orders backend is running on PORT 5002","service":"orders-backend","timestamp":"2026-08-13T17:29:15.589Z"}

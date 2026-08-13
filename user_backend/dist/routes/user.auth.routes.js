@@ -1,6 +1,6 @@
 import { AuthController } from "../controllers/user.auth.controller.js";
-import express from 'express';
-const auth_router = express.Router();
+import { Router } from "express";
+const auth_router = Router();
 const controller = new AuthController();
 auth_router.post('/signin', controller.SigninController.bind(controller));
 auth_router.post('/signup', controller.SignupController.bind(controller));
