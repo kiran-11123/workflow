@@ -33,13 +33,16 @@ export class ProductController {
     async DeleteProduct(req, res) {
         logger.info(`Entered into Delete Product controller`);
         try {
-            const product_id = req.params;
+            const product_id = Array.isArray(req.params.product_id)
+                ? req.params.product_id[0]
+                : req.params.product_id;
             if (!product_id) {
                 logger.error(`Product id is missing`);
                 return res.status(400).json({
                     message: `Product Id not found`
                 });
             }
+            const result = await products_service.DeleteProduct(product_id);
             logger.info(`Product with Id ${product_id} deleted successfully`);
             return res.status(200).json({
                 message: `Product Deleted successfully`
@@ -54,6 +57,47 @@ export class ProductController {
             }
             return res.status(500).json({
                 message: 'Internal Server Error'
+            });
+        }
+    }
+    async UpdateProduct(req, res) {
+        logger.info('Entered into product update controller');
+        try {
+            const { product_id, price, status } = req.body;
+            if (!product_id) {
+                return res.status(400).json({
+                    message: 'Product ID is required'
+                });
+            }
+            if (price === undefined && status === undefined) {
+                return res.status(400).json({
+                    message: 'At least one field is required to update'
+                });
+            }
+            if (price !== undefined && (typeof price !== 'number' || price < 0)) {
+                return res.status(400).json({
+                    message: 'Price must be a valid positive number'
+                });
+            }
+            const result = await products_service.UpdateProduct(product_id, price, status);
+            if (!result) {
+                return res.status(404).json({
+                    message: 'Product not found'
+                });
+            }
+            logger.info('Product updated successfully', {
+                product_id
+            });
+            return res.status(200).json({
+                message: 'Product updated successfully'
+            });
+        }
+        catch (er) {
+            logger.error('Error while updating product', {
+                error: er
+            });
+            return res.status(500).json({
+                message: 'Internal server error'
             });
         }
     }
